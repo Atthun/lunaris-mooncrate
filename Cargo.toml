@@ -1,0 +1,9 @@
+[package]
+name = "mooncrate"
+version = "0.5.3"
+authors = ["Atthun <idkatthun@gmail.com"]
+edition = "2021"
+
+[dependencies]
+clap = "4.0"
+colored = "2.0"
