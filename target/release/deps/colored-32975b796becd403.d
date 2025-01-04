@@ -1,0 +1,12 @@
+/home/atthun/lunaris-mooncrate/target/release/deps/libcolored-32975b796becd403.rmeta: /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/lib.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/color.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/control.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/error.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/style.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/customcolors.rs
+
+/home/atthun/lunaris-mooncrate/target/release/deps/libcolored-32975b796becd403.rlib: /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/lib.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/color.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/control.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/error.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/style.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/customcolors.rs
+
+/home/atthun/lunaris-mooncrate/target/release/deps/colored-32975b796becd403.d: /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/lib.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/color.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/control.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/error.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/style.rs /home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/customcolors.rs
+
+/home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/lib.rs:
+/home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/color.rs:
+/home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/control.rs:
+/home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/error.rs:
+/home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/style.rs:
+/home/atthun/.cargo/registry/src/index.crates.io-6f17d22bba15001f/colored-2.2.0/src/customcolors.rs:

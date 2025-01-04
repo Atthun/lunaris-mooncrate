@@ -20,9 +20,13 @@ fn main() {
                 .arg(Arg::new("package").required(true).help("Package to remove")),
         )
         .subcommand(
-            Command::new("update")
+            Command::new("update-packages")
                 .about("Update packages")
-                .arg(Arg::new("package").required(false).help("Package to update")),
+                .arg(Arg::new("package").required(true).help("Package to update")),
+        )
+        .subcommand(
+            Command::new("update")
+                .about("Full system update")
         )
         .subcommand(
             Command::new("search")
@@ -48,12 +52,14 @@ fn match_subcommands(matches: &clap::ArgMatches) {
     } else if let Some(matches) = matches.subcommand_matches("remove") {
         let package = matches.get_one::<String>("package").unwrap();
         remove_packages(package);
-    } else if let Some(matches) = matches.subcommand_matches("update") {
+    } else if let Some(matches) = matches.subcommand_matches("update-packages") {
         let package = matches.get_one::<String>("package").unwrap();
-        update(package);
+        update_packages(package);
     } else if let Some(matches) = matches.subcommand_matches("search") {
         let package = matches.get_one::<String>("package").unwrap();
         search_packages(package);
+    } else if let Some(_matches) = matches.subcommand_matches("update") {
+        update();
     } else if let Some(_matches) = matches.subcommand_matches("list") {
         list_packages();
     } else if let Some(_matches) = matches.subcommand_matches("about") {
@@ -109,7 +115,7 @@ fn remove_packages(package: &str) {
     }
 }
 
-fn update(package: &str) {
+fn update_packages(package: &str) {
     println!(
         "{} {} {}",
         "::".green().bold(),
@@ -130,6 +136,32 @@ fn update(package: &str) {
                 Err(err) => eprintln!("Error reading line: {}", err),
             }
         }
+    }
+}
+
+fn update() {
+    println!(
+        "{} {}",
+        "::".green().bold(),
+        "Starting full system update".bold()
+    );
+
+    let mut command = StdCommand::new("pkcon")
+        .arg("update")
+        .stdout(Stdio::piped())
+        .spawn()
+        .expect("Failed to search packages");
+
+    if let Some(stdout) = command.stdout.take() {
+        let reader = BufReader::new(stdout);
+        for line in reader.lines() {
+            match line {
+                Ok(line_content) => println!("{}", line_content),
+                Err(err) => eprintln!("Error reading line: {}", err),
+            }
+        }
+    } else {
+        eprintln!("Failed to capture command output.");
     }
 }
 
