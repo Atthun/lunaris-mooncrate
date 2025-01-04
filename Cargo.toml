@@ -1,6 +1,6 @@
 [package]
 name = "mooncrate"
-version = "0.5.3"
+version = "0.6.0"
 authors = ["Atthun <idkatthun@gmail.com"]
 edition = "2021"
 

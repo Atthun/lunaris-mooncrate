@@ -74,9 +74,11 @@ fn install_packages(package: &str) {
         format!("Installing {} and Synchronizing package databases", package.green().italic()).bold(),
         ""
     );
-    let mut command = StdCommand::new("pkcon")
+    let mut command = StdCommand::new("sudo")
+        .arg("pkcon")
         .arg("install")
         .arg(package)
+        .arg("-y")
         .stdout(Stdio::piped())
         .spawn()
         .expect("Failed to install packages");
@@ -98,9 +100,11 @@ fn remove_packages(package: &str) {
         format!("Removing {} and Synchronizing package databases", package.green().italic()).bold(),
         ""
     );
-    let mut command = StdCommand::new("pkcon")
+    let mut command = StdCommand::new("sudo")
+        .arg("pkcon")
         .arg("remove")
         .arg(package)
+        .arg("-y")
         .stdout(Stdio::piped())
         .spawn()
         .expect("Failed to remove packages");
@@ -122,9 +126,11 @@ fn update_packages(package: &str) {
         format!("Updating {} and Synchronizing package databases", package.green().italic()).bold(),
         ""
     );
-    let mut command = StdCommand::new("pkcon")
+    let mut command = StdCommand::new("sudo")
+        .arg("pkcon")
         .arg("update")
         .arg(package)
+        .arg("-y")
         .stdout(Stdio::piped())
         .spawn()
         .expect("Failed to update packages");
@@ -146,11 +152,13 @@ fn update() {
         "Starting full system update".bold()
     );
 
-    let mut command = StdCommand::new("pkcon")
+    let mut command = StdCommand::new("sudo")
+        .arg("pkcon")
         .arg("update")
+        .arg("-y")
         .stdout(Stdio::piped())
         .spawn()
-        .expect("Failed to search packages");
+        .expect("Failed to update packages");
 
     if let Some(stdout) = command.stdout.take() {
         let reader = BufReader::new(stdout);
